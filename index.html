@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="tr">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Katkı Payı Ücretini Hesapla | İTÜ24</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="http://itu24.com/assets/css/main.css">
+        <link rel="stylesheet" href="css/style.css">
+
+        <link rel="alternate" type="application/rss+xml" title="Haberler" href="http://feeds.feedburner.com/itu24/haberler" />
+        <link rel="alternate" type="application/rss+xml" title="Köşe Yazıları" href="http://feeds.feedburner.com/itu24/koseyazilari" />
+        <link rel="alternate" type="application/rss+xml" title="Etkinlikler" href="http://feeds.feedburner.com/itu24/etkinlikler" />
+
+        <link rel="shortcut icon" href="http://itu24.com/assets/img/icons/handcrafted/subpixel/favicon.ico">
+
+        <meta name="apple-mobile-web-app-title" content="İTÜ24">
+        <link rel="apple-touch-icon" sizes="57x57" href="http://itu24.com/assets/img/icons/apple-touch-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="http://itu24.com/assets/img/icons/apple-touch-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="http://itu24.com/assets/img/icons/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="http://itu24.com/assets/img/icons/apple-touch-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="http://itu24.com/assets/img/icons/apple-touch-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="http://itu24.com/assets/img/icons/apple-touch-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="http://itu24.com/assets/img/icons/apple-touch-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="http://itu24.com/assets/img/icons/apple-touch-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="http://itu24.com/assets/img/icons/apple-touch-icon-180x180.png">
+
+        <link rel="icon" type="image/png" href="http://itu24.com/assets/img/icons/favicon-192x192.png" sizes="192x192">
+        <link rel="icon" type="image/png" href="http://itu24.com/assets/img/icons/favicon-160x160.png" sizes="160x160">
+        <link rel="icon" type="image/png" href="http://itu24.com/assets/img/icons/favicon-96x96.png" sizes="96x96">
+        <link rel="icon" type="image/png" href="http://itu24.com/assets/img/icons/handcrafted/subpixel/favicon-16x16.png" sizes="16x16">
+        <link rel="icon" type="image/png" href="http://itu24.com/assets/img/icons/handcrafted/subpixel/favicon-32x32.png" sizes="32x32">
+
+        <meta name="theme-color" content="#2256ab">
+        <meta name="msapplication-TileColor" content="#2256ab">
+        <meta name="msapplication-TileImage" content="http://itu24.com/assets/img/icons/mstile-144x144.png">
+        <meta name="msapplication-config" content="http://itu24.com/assets/img/icons/browserconfig.xml">
+        <meta name="application-name" content="İTÜ24">
+    </head>
+    <body class="bootstrap">
+        <header>
+            <section id="header-ici">
+                <a href="/"><img id="logo" src="http://itu24.com/assets/img/logo.svg"></a>
+                <nav id="menu">
+                    <ul>
+                        <li><a href="http://itu24.com/haberler">Haberler</a></li>
+                        <li><a href="http://itu24.com/etkinlikler">Etkinlikler</a></li>
+                        <li><a href="http://yazilim24.com" target="_blank">Eğitimler</a></li>
+                        <li><a href="http://itu24.com/kurumsal">Kurumsal</a></li>
+                        <li><a href="http://itu24.com/iletisim">İletişim</a></li>
+                    </ul>
+                </nav>
+            </section>
+        </header>
+
+        <main>
+            <div class="page-header">
+                <h1>Katkı Payı Ücretini Hesapla</h1>
+            </div>
+
+            <form id="harc-hesaplayici" class="form-horizontal">
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Uyruğunuz:</label>
+                    <div class="col-sm-10">
+                        <label class="radio-inline">
+                            <input type="radio" name="uyruk" value="tc" checked> T.C.
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="uyruk" value="diger"> Diğer
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="form_fakulte" class="col-sm-2 control-label">Fakülteniz:</label>
+                    <div class="col-sm-10">
+                        <select id="form_fakulte" name="fakulte" class="form-control" required>
+                            <option>Seçiniz</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="form_donem" class="col-sm-2 control-label">Kaçıncı döneminiz:</label>
+                    <div class="col-sm-10">
+                        <input type="number" name="donem" id="form_donem" class="form-control" min="0" aria-describedby="donemHelp" required>
+                        <span id="donemHelp" class="help-block">Hazırlık hariç, bölümünüzde kaçıncı yarıyılınızı okuyacağınızı giriniz. Yaz öğretimlerini saymayınız.</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="form_kredi" class="col-sm-2 control-label">Alacağınız kredi:</label>
+                    <div class="col-sm-10">
+                        <input type="number" class="form-control" name="kredi" id="form_kredi" min="0" max="50" step="0.5" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" class="btn btn-primary">Hesapla</button>
+                    </div>
+                </div>
+            </form>
+
+            <hr>
+
+            <div class="well">
+                <h3>Özel Koşullar</h3>
+                <ol>
+                    <li>Devlet Yüksek Öğretim Kurumlarında görevli olup, lisansüstü öğrenim gören Araştırma Görevlileri katkı payından ve arttırımlı katkı payından muaftır.</li>
+                    <li>Şehit ve Gazi çocuğu olan öğrenciler öğrenimleri süresince katkı payından muaftır.</li>
+                    <li>Bakanlıklar ve kamu kuruluşları adına mecburi hizmet karşılığı öğrenim gören öğrencilerin katkı payı ödemeleri ilgili Bakanlık/Kuruluş tarafından yapılır.</li>
+                    <li>Çift Anadal Programlarına tanınan 1 yıllık ek süre normal süre olarak sayılır.</li>
+                    <li>2014/2015 Eğitim-Öğretim yılı itibari ile Azami Süresini aşan öğrenciler 6569 sayılı kanunun Madde 32 "Geçici Madde 67" gereğince program süresini aşan öğrenciler gibi katkı payı ve arttırımlı katkı payı öderler.</li>
+                </ol>
+            </div>
+
+            <hr>
+
+            <footer>
+                <p><small><a href="http://itu24.com/" title="İTÜ24">İTÜ24</a> tarafından geliştirilen bu araç sadece bilgi amaçlıdır ve kesin bilgi niteliği taşımamaktadır. Ödenecek gerçek tutar 24 Şubat 2015 tarihinden itibaren <a href="http://ssb.sis.itu.edu.tr:9000/pls/PROD/twbkwbis.P_WWWLogin">Öğrenci Bilgi Sistemleri Otomasyonu</a>'nda bulunan <em>Öğrenci Bilgileri</em> menüsü altındaki <em>Dönemlik Hesap Özeti</em> sayfasından görüntülenebilir.<br>Detaylı bilgi için İTÜ üniversite yönetim kurulunun öğrenci katkı payı ve öğrenim ücretlerine ilişkin <a href="http://www.sis.itu.edu.tr/tr/duyuru/duyuru_detay.php?id=641">yaptığı açıklamayı</a> okuyabilirsiniz.</small></p>
+            </footer>
+        </main>
+
+        <div class="modal fade" id="ucretModal" tabindex="-1" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title">Katkı Payı Ücretiniz</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p id="ucret"></p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Kapat</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+        <script src="js/jquery.ui.shake.min.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>

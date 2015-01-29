@@ -1,0 +1,39 @@
+.bootstrap html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video, main {
+    box-sizing: border-box;
+    transition: none;
+}
+
+.bootstrap a {
+    color: #23527c;
+}
+
+.bootstrap h1 {
+    font-size: 36px;
+}
+
+.bootstrap hr {
+    border-top: 1px solid #aaa;
+}
+
+.bootstrap input[type=radio], .bootstrap input[type=checkbox] {
+    width: auto !important;
+    height: auto !important;
+    opacity: 1 !important;
+}
+
+.bootstrap ol li {
+    list-style: decimal;
+    margin-left: 20px;
+}
+
+.bootstrap .page-header {
+    border-bottom: 1px solid #aaa;
+}
+
+.bootstrap .modal-dialog {
+    margin-top: 90px;
+}
+
+#ucret {
+    font-size: larger;
+}
