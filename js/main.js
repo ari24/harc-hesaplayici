@@ -35,7 +35,7 @@ $(function () {
     $('#harc-hesaplayici').submit(function (e) {
         var uyruk = $('input[name="uyruk"]:checked').val();
         var fakulte = $('select[name="fakulte"]').val();
-        var donem = parseInt($('input[name="donem"]').val());
+        var uzatma = $('input[name="uzatma"]:checked').val();
         var kredi = parseInt($('input[name="kredi"]').val());
 
         error = false;
@@ -50,7 +50,7 @@ $(function () {
 
         if (kredi == 0) {
             ucret = 0;
-        } else if (uyruk == "tc" && ((fakulte == "yuksek" && donem <= 4) || donem <= 8)) {
+        } else if (uyruk == "tc" && uzatma == "hayir") {
             ucret = 0;
             muaf = true;
         } else {
