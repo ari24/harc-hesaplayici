@@ -50,9 +50,13 @@ $(function () {
 
         if (kredi == 0) {
             ucret = 0;
-        } else if (uyruk == "tc" && uzatma == "hayir") {
-            ucret = 0;
-            muaf = true;
+        } else if (uzatma == "hayir") {
+            if (uyruk == "tc") {
+                ucret = 0;
+                muaf = true;
+            } else {
+                ucret = ucretler["donemlik"][uyruk][fakulte];
+            }
         } else {
             ucret = ucretler["donemlik"][uyruk][fakulte] + kredi * ucretler["kredilik"][uyruk][fakulte];
         }
