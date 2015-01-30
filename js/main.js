@@ -45,19 +45,16 @@ $(function () {
             return;
         }
 
-        var ucret;
+        var ucret = 0;
         var muaf = false;
 
-        if (kredi == 0) {
-            ucret = 0;
-        } else if (uzatma == "hayir") {
+        if (uzatma == "hayir") {
             if (uyruk == "tc") {
-                ucret = 0;
                 muaf = true;
             } else {
                 ucret = ucretler["donemlik"][uyruk][fakulte];
             }
-        } else {
+        } else if (kredi > 0) {
             ucret = ucretler["donemlik"][uyruk][fakulte] + kredi * ucretler["kredilik"][uyruk][fakulte];
         }
 
